@@ -256,7 +256,7 @@ sum is = 15
                 <pre class="language-html"><code>int main()
 {
   
-    int a[5],i,key;
+    int a[5],i,key,c=0,d;
 	printf("Enter elements in array:");
 	for(i=0;i<(5);i++){
 	scanf("%d",&a[i]);
@@ -265,15 +265,19 @@ sum is = 15
 	scanf("%d",&key);
 	for(i=0;i<(5);i++){
 	if (a[i]==key){
-	printf("element found");}
-	}printf("element not found");
+	c=1;
+	d=i;    
+	}
+	}
+	if(c>0){printf("Element found at index: %d",d);}
+	else{printf("NOT");}
 	return 0;
 }
 OUTPUT
  
 Enter elements in array:4 6 2 1 3
 Enter the key:2
-element found
+Element found at index 2
 
 
 </code></pre>
